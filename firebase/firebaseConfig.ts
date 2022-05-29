@@ -35,7 +35,7 @@ function connectEmulators(host: string) {
   connectFunctionsEmulator(functions, host, 5001)
 }
 
-function useLocalEmulators() {
+function turnOnLocalEmulators() {
   if (typeof window !== 'undefined') {
     switch (window.location.hostname) {
       case 'localhost':
@@ -44,8 +44,8 @@ function useLocalEmulators() {
       case '127.0.0.1':
         connectEmulators('127.0.0.1')
         break
-      case '192.168.0.9':
-        connectEmulators('192.168.0.9')
+      case '192.168.0.4':
+        connectEmulators('192.168.0.4')
         break
       default:
         break
@@ -55,6 +55,6 @@ function useLocalEmulators() {
   }
 }
 
-useLocalEmulators()
+turnOnLocalEmulators()
 
 export { app, auth, db, functions, storage }

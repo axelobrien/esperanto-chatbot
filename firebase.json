@@ -19,18 +19,28 @@
   },
   "emulators": {
     "auth": {
+      "name": "auth",
+      "host": "0.0.0.0",
       "port": 9099
     },
     "functions": {
+      "name": "functions",
+      "host": "0.0.0.0",
       "port": 5001
     },
     "firestore": {
+      "name": "firestore",
+      "host": "0.0.0.0",
       "port": 8080
     },
     "hosting": {
+      "name": "hosting",
+      "host": "0.0.0.0",
       "port": 5000
     },
     "storage": {
+      "name": "storage",
+      "host": "0.0.0.0",
       "port": 9199
     },
     "ui": {

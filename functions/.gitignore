@@ -9,3 +9,5 @@ typings/
 node_modules/
 
 .env
+lib
+TranslateAPIKEY.json
