@@ -5,13 +5,13 @@ import { getFunctions, connectFunctionsEmulator } from 'firebase/functions'
 import { getStorage, connectStorageEmulator } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAHHi1Hq-DAlWGCEoSdlt8A4OHiSOhgD_E",
-  authDomain: "gpt-sass-bot.firebaseapp.com",
-  projectId: "gpt-sass-bot",
-  storageBucket: "gpt-sass-bot.appspot.com",
-  messagingSenderId: "605489484246",
-  appId: "1:605489484246:web:84cdf506294960fd0a9477",
-  measurementId: "G-B2PCT8NKL8"
+  apiKey: "AIzaSyBLZCBFeDdQ5Fsn1JC_ilgHUKpf3Kuwckc",
+  authDomain: "esperanto-chatbot.firebaseapp.com",
+  projectId: "esperanto-chatbot",
+  storageBucket: "esperanto-chatbot.appspot.com",
+  messagingSenderId: "720856462408",
+  appId: "1:720856462408:web:11100dfd0bc7f6c9bd547d",
+  measurementId: "G-FP3T13R77C"
 }
 
 let app: FirebaseApp

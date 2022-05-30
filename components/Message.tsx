@@ -25,7 +25,7 @@ function Message(props: Props) {
       setStatus(TranslationStatus.PENDING)
       
       const translate: HttpsCallable<TranslateRequest, unknown> = httpsCallable(functions, 'translate')
-      const response = await translate({ text: text, from: 'eo', to: 'en' }) as HttpsCallableResult<{text?: string, error?: unknown}>
+      const response = await translate({ text, from: 'eo', to: 'en' }) as HttpsCallableResult<{text?: string, error?: unknown}>
       
       if (response.data.text) {
         const translatedText = response.data.text

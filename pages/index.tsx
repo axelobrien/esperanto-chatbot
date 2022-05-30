@@ -22,15 +22,20 @@ function Home() {
 
     const response = responseData?.data ?? responseData?.error ?? 'Sorry, I don\'t know'
 
-    const msg = new SpeechSynthesisUtterance(response)
-    msg.lang = 'eo'
-    window.speechSynthesis.speak(msg)
-
     setMessages([...messages, new MessageType(text, true), new MessageType(response, false)])
   }
 
   return (<>
     <div className='flex flex-col justify-center items-center'>
+
+      <ThemedText styles='text-5xl font-semibold text-center'>
+        Your Only Esperanto Speaking Friend
+      </ThemedText>
+
+      <ThemedText styles='text-2xl font-semibold text-center'>
+        (also your only friend)
+      </ThemedText>
+      
 
       <MessageHistory messages={messages} />
 

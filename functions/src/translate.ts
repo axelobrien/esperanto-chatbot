@@ -24,7 +24,6 @@ export const translate = functions.https.onCall(async (data: TranslateRequest, c
           format: 'text'
         }
       )
-      functions.logger.log(translation)
 
       if (!translation) {
         throw new Error('No response from OpenAI')
