@@ -40,22 +40,15 @@ function Message(props: Props) {
 
   return (<>
       <p 
-      className={`text-white text-2xl m-2 p-4 rounded-xl max-w-[70%] sm:max-w-[40%] ${isUser ? 'bg-blue-500 self-end rounded-br-none' : 'bg-gradient-to-tr from-purple-500 to-blue-600 self-start rounded-bl-none'}`} 
-      onClick={() => translateToNative()}
+        onClick={() => translateToNative()}
+        className={`text-white text-2xl m-2 p-4 rounded-xl max-w-[70%] sm:max-w-[40%] ${isUser ? 'bg-blue-500 self-end rounded-br-none' : 'bg-gradient-to-tr from-purple-500 to-blue-600 self-start rounded-bl-none hover:cursor-pointer'}`} 
       >
-
       {text}
-
-      {status === TranslationStatus.PENDING && <p className='text-white'>
-        Translating...
-      </p>}
-
-      {status === TranslationStatus.SUCCESS && <p className='text-white w-full mx-0 border-t-2 border-white mt-2 pt-2'>
-        {translation}
-      </p>}
-
-      {status === TranslationStatus.ERROR && <p className='text-white'>
-        Sorry, something went wrong
+      
+      {!isUser && status !== TranslationStatus.NOT_STARTED && <p className='text-white w-full mx-0 border-t-2 border-white mt-2 pt-2'>
+        {status === TranslationStatus.PENDING && 'Translating...'}
+        {status === TranslationStatus.SUCCESS && translation}
+        {status === TranslationStatus.ERROR && 'Sorry, something went wrong'}
       </p>}
 
     </p>

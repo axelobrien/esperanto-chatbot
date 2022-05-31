@@ -55,6 +55,6 @@ function turnOnLocalEmulators() {
   }
 }
 
-turnOnLocalEmulators()
+// turnOnLocalEmulators()
 
 export { app, auth, db, functions, storage }

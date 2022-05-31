@@ -12,8 +12,9 @@ function TextBox(props: Props) {
   return (<>
     <form 
       onSubmit={(e) => {
-      e.preventDefault()
-      submitCallback && submitCallback(text)
+        e.preventDefault()
+        submitCallback && submitCallback(text)
+        setText('')
       }}
       className='flex flex-col sm:flex-row mx-auto'
     >
@@ -26,6 +27,7 @@ function TextBox(props: Props) {
           setText(e.target.value)
           changeCallback && changeCallback(e.target.value)
         }}
+        value={text}
         spellCheck={true}
       />
 

@@ -18,6 +18,7 @@ function Home() {
 
   async function handleQuestion(text: string) {
     setMessages([...messages, new MessageType(text, true)])
+    setText('')
     const responseData = (await askQuestion({ text })) as GPT3Response
 
     const response = responseData?.data ?? responseData?.error ?? 'Sorry, I don\'t know'
@@ -35,7 +36,6 @@ function Home() {
       <ThemedText styles='text-2xl font-semibold text-center'>
         (also your only friend)
       </ThemedText>
-      
 
       <MessageHistory messages={messages} />
 
