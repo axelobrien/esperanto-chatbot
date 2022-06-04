@@ -23,6 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         `
       }}
     ></Script>
+    <Script 
+      strategy='lazyOnload' 
+      async 
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9801717456861027"
+      crossOrigin="anonymous"
+    ></Script>
         
     <Component {...pageProps} />
   </>
