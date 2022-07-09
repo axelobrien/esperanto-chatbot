@@ -6,7 +6,6 @@ import { functions } from '../firebase/firebaseConfig'
 import { MessageType } from '../types/message'
 import MessageHistory from '../components/MessageHistory'
 import Head from 'next/head'
-import Image from 'next/image'
 import ThemedDiv from '../components/ThemedDiv'
 const askQuestion = httpsCallable(functions, 'generateResponse')
 

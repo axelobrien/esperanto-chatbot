@@ -3,6 +3,7 @@ import React from 'react'
 type Props = {
   children: React.ReactNode
   styles?: string
+  attributes?: React.HTMLAttributes<HTMLDivElement>
 }
 
 function ThemedDiv(props: Props) {

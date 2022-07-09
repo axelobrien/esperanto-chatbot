@@ -26,7 +26,7 @@ export const translate = functions.https.onCall(async (data: TranslateRequest, c
       )
 
       if (!translation) {
-        throw new Error('No response from OpenAI')
+        throw new Error('No response from Google Translate API')
       }
 
       return { 

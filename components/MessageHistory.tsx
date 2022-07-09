@@ -6,10 +6,16 @@ import ThemedText from './ThemedText'
 
 function MessageHistory(props: { messages: MessageType[] }) {
   const { messages } = props
-  const dummy = useRef<HTMLSpanElement>(null)
+  const dummy = useRef<HTMLSpanElement | HTMLDivElement>(null)
 
   useEffect(() => {
-    if (messages.length > 0) dummy.current?.scrollIntoView({ behavior: 'smooth' })
+    if (messages.length > 0) {
+      try {
+        dummy.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+      } catch (e) {
+        alert(e)
+      }
+    }
   }, [messages])
 
   return (<>
