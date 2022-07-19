@@ -7,6 +7,7 @@ import { MessageType } from '../types/message'
 import MessageHistory from '../components/MessageHistory'
 import Head from 'next/head'
 import ThemedDiv from '../components/ThemedDiv'
+
 const askQuestion = httpsCallable(functions, 'generateResponse')
 
 type GPT3Response = {

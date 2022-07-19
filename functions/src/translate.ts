@@ -14,33 +14,27 @@ type TranslateRequest = {
 }
 
 export const translate = functions.https.onCall(async (data: TranslateRequest, context) => {
-  // if (context.app) {
-    try {
-      const [translation] = await translateInstance.translate(
-        [data.text], 
-        {
-          from: data.from, 
-          to: data.to,
-          format: 'text'
-        }
-      )
+  try {
+    const [translation] = await translateInstance.translate(
+      [data.text], 
+      {
+        from: data.from, 
+        to: data.to,
+        format: 'text'
+      }
+    )
 
-      if (!translation) {
-        throw new Error('No response from Google Translate API')
-      }
+    if (!translation) {
+      throw new Error('No response from Google Translate API')
+    }
 
-      return { 
-        text: translation[0]
-      }
-    } catch (error) { 
-      functions.logger.error('error', error)
-      return {
-        error
-      }
-    }   
-  // } else {
-  //   return {
-  //     error: 'Unauthorized'
-  //   }
-  // }
+    return { 
+      text: translation[0]
+    }
+  } catch (error) { 
+    functions.logger.error('error', error)
+    return {
+      error
+    }
+  }
 })
