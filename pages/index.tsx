@@ -55,7 +55,7 @@ function Home() {
 
     <div className='flex flex-col items-center h-screen overflow-y-scroll'>
 
-      <ThemedText styles='text-5xl font-semibold text-center mt-4'>
+      <ThemedText class='text-5xl font-semibold text-center mt-4'>
         Your Only Esperanto Speaking Friend
       </ThemedText>
 
@@ -65,7 +65,7 @@ function Home() {
         className='w-1/12 min-w-[200px]'
       />
 
-      <ThemedText styles='text-2xl font-semibold text-center'>
+      <ThemedText class='text-2xl font-semibold text-center'>
         (also your only friend)
       </ThemedText>
 
@@ -76,19 +76,16 @@ function Home() {
         submitCallback={handleQuestion} 
       />
 
-      <ThemedText styles='text-2xl mb-10'>
+      <ThemedText class='text-2xl mb-10'>
         {text.length} / 30 characters
       </ThemedText>
 
-      <ThemedDiv styles='max-w-2xl w-11/12 p-4 rounded-lg shadow-xl mt-auto mb-10'>
-        <ThemedText styles='text-xl'>
+      <ThemedDiv class='max-w-7xl w-11/12 p-4 rounded-lg shadow-xl mt-auto mb-10'>
+        <ThemedText class='text-xl'>
           Need a friend to speak Esperanto with? Need a friend period? Well this robot can fill that empty void in your heart! It uses <a href='https://openai.com/api/' target={'_blank'} rel="noreferrer" className='underline text-blue-400'>GPT-3,</a> the most powerful language processing model in the world, just to sass you in Esperanto.
-          <br />
-          <br />
-          Bezonas amikon kun kiu paroli Esperanton? Bezonas amikon? Ĉi tiu paĝo povas helpi al vi! Ĉi tiu paĝo uzas GPT-3 paroli kun vi. GPT-3 estas inteligenta kaj ĝi povas kompreni homan tekston, do ĝi estos bonega amiko por vi!
         </ThemedText>
 
-        <ThemedText styles='text-2xl mt-6'>
+        <ThemedText class='text-2xl mt-6'>
           Site made by Axel O.
           <br/> 
           <a 
@@ -101,15 +98,15 @@ function Home() {
           </a> 
           <br />
           <br />
-          I also made a site that generates 90&apos;s style sites
+          I also made a news site that has stories from the future
           <br />
           <a 
-            href='https://the90sweb.com'
+            href='https://tomorrowtribune.com/'
             target={'_blank'} 
             rel="noreferrer" 
             className='underline text-blue-400'
           >
-            the90sweb.com
+            https://tomorrowtribune.com/
           </a>
         </ThemedText>
       </ThemedDiv>

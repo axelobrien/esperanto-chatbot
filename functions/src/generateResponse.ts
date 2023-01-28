@@ -16,7 +16,7 @@ export const generateResponse = functions.https.onCall(async (data, context) => 
   const openai = new OpenAIApi(configuration)
 
   try {
-    const rawResponse = await openai.createCompletion('text-curie-001', {
+    const rawResponse = await openai.createCompletion('text-davinci-003', {
       prompt: `Respond in Esperanto with sass: ${data.text ?? 'best pickup line?'}\n\n\n`,
       temperature: 0.3,
       max_tokens: 40,

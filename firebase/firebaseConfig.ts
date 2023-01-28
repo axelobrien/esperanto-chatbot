@@ -20,7 +20,6 @@ if (!getApps().length) {
   app = initializeApp(firebaseConfig)
 } else {
   app = getApps()[0]
-  console.log(getApps()[0].options)
 }
   
 const auth = getAuth(app)

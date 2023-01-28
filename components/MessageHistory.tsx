@@ -19,9 +19,9 @@ function MessageHistory(props: { messages: MessageType[] }) {
   }, [messages])
 
   return (<>
-    <ThemedDiv styles={`overflow-y-scroll flex flex-col justify-start items-center rounded-xl max-w-2xl w-11/12 mb-8 mt-4 h-max max-h-[70vh] ${messages.length > 0 && 'min-h-[50vh]'}`}>
+    <ThemedDiv class={`overflow-y-scroll flex flex-col justify-start items-center rounded-xl max-w-2xl w-11/12 mb-8 mt-4 h-max max-h-[70vh] ${messages.length > 0 && 'min-h-[50vh]'}`}>
       
-      {messages.length > 0 && <ThemedText styles='text-2xl font-semibold text-center my-3'>
+      {messages.length > 0 && <ThemedText class='text-2xl font-semibold text-center my-3'>
         Click any response from the AI to translate it to English
       </ThemedText>}
       
